@@ -6,4 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Resultats">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="234dp"
+        android:layout_height="58dp"
+        android:gravity="center"
+        android:text="Résultats"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listV"
+        android:layout_width="409dp"
+        android:layout_height="623dp"
+        android:layout_marginTop="1dp"
+        android:fadeScrollbars="true"
+        android:scrollbarStyle="insideOverlay"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
