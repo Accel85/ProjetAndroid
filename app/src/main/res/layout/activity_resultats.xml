@@ -7,7 +7,7 @@
     tools:context=".Resultats">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/texteTitle"
         android:layout_width="234dp"
         android:layout_height="58dp"
         android:gravity="center"
@@ -26,6 +26,6 @@
         android:scrollbarStyle="insideOverlay"
         android:verticalScrollbarPosition="right"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/texteTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
