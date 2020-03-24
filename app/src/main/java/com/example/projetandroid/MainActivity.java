@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
                 String query = infoRecherche.getText().toString();
                 String number = "5";
                 Ion.with(v.getContext())
-                    .load("https://api.spoonacular.com/recipes/search?query=" + query + "&apiKey=" + key)
+                    .load("https://api.spoonacular.com/recipes/search?query=" + query + "&number=100&apiKey=" + key)
                     .asString()
                     .setCallback(new FutureCallback<String>() {
                         @Override

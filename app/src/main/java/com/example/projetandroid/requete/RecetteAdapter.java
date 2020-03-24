@@ -29,7 +29,7 @@ public class RecetteAdapter extends ArrayAdapter<Recette> {
         TextView pers = (TextView)row.findViewById(R.id.personnes);
         pers.setText("for: "+r.getServings());
         TextView temps = (TextView)row.findViewById(R.id.temps);
-        pers.setText(""+r.getReadyIn() +"'");
+        temps.setText(""+r.getReadyIn() +"'");
         return(row);
     }
 }
