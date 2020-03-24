@@ -11,11 +11,11 @@
         android:id="@+id/texteTitle"
         android:layout_width="119dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
         android:layout_marginTop="32dp"
         android:text="Recettes"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
