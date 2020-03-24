@@ -3,11 +3,18 @@ package com.example.projetandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+
+import org.json.JSONException;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -17,6 +24,8 @@ public class MainActivity extends AppCompatActivity
     private Button lancerRecherche;
 
     private String[] genres;
+
+    //Picasso.get().load( "https://upload.wikimedia.org/wikipedia/commons/1/14/Albert_Einstein_1947.jpg" ).into(image);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +47,39 @@ public class MainActivity extends AppCompatActivity
         genreSpinner.setAdapter(spinnerArrayAdapter);
 
 
-        /*
+
+
+
         lancerRecherche.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent
+                Ion.with(v.getContext())
+                    .load("https://api.spoonacular.com/recipes/search?query=cheese&number=2&apiKey=d80aa41935b94f5eb933fad13a39737e")
+                    .asString()
+                    .setCallback(new FutureCallback<String>() {
+                        @Override
+                        public void onCompleted(Exception e, String result) {
+                            /*
+                            try {
+
+                                JSONObject repObj = (JSONObject) new JSONTokener(result).nextValue();
+                                String res = "";
+                                res += repObj.get("nom").toString();
+                                res += "\n";
+
+                                JSONObject repObj2 = repObj.getJSONObject("adresse");
+                                res += repObj2.get("lieuDit").toString();
+
+                                textJson.setText(res);
+
+
+                            } catch (JSONException je) {
+                                Log.e("UwU", je.getMessage() );
+                            }*/
+                        }
+
+                    });
             }
-        });*/
+        });
     }
 }
