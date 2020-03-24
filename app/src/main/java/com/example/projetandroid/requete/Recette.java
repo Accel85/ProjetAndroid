@@ -2,12 +2,12 @@ package com.example.projetandroid.requete;
 
 public class Recette
 {
-    private String id;
+    private int id;
     private String title;
-    private String readyIn;
-    private String servings;
+    private int readyIn;
+    private int servings;
 
-    public Recette(String id, String title, String readyIn, String servings)
+    public Recette(int id, String title, int readyIn, int servings)
     {
         this.id = id;
         this.title = title;
@@ -15,7 +15,7 @@ public class Recette
         this.servings = servings;
     }
 
-    public String getId()
+    public int getId()
     {
         return this.id;
     }
@@ -25,12 +25,12 @@ public class Recette
         return this.title;
     }
 
-    public String getReadyIn()
+    public int getReadyIn()
     {
         return this.readyIn;
     }
 
-    public String getServings()
+    public int getServings()
     {
         return this.servings;
     }
