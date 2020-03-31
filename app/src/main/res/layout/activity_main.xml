@@ -36,25 +36,11 @@
         android:id="@+id/genreSpinner"
         android:layout_width="200dp"
         android:layout_height="48dp"
-        android:layout_marginTop="64dp"
-        android:scrollbarSize="8dp"
+        android:layout_marginTop="32dp"
+        android:scrollbarSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/texteGenre"
-        app:layout_constraintTop_toBottomOf="@+id/infoRecherche" />
-
-    <TextView
-        android:id="@+id/texteGenre"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="64dp"
-        android:gravity="center"
-        android:text="Genre :"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintEnd_toStartOf="@+id/genreSpinner"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoRecherche" />
 
     <SeekBar
@@ -83,16 +69,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texteGenre" />
 
+    <CheckBox
+        android:id="@+id/checkNumber"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+        android:text="@string/check_number"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreSeekBar" />
+
     <Button
         android:id="@+id/lancerRecherche"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:text="Rechercher"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nombreSeekBar" />
+
+    <TextView
+        android:id="@+id/texteGenre"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Genre :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/genreSpinner"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoRecherche" />
+
+    <Button
+        android:id="@+id/rechercheAvancee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/rechercheAvancee"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lancerRecherche" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Spinner;
@@ -24,11 +25,11 @@ public class MainActivity extends AppCompatActivity
     private EditText infoRecherche;
     private Spinner genreSpinner;
     private SeekBar nombreSeekBar;
+    private CheckBox limiteNombre;
     private Button lancerRecherche;
+    private Button rechercheAvancee;
 
     private String[] genres;
-
-    //Picasso.get().load( "https://upload.wikimedia.org/wikipedia/commons/1/14/Albert_Einstein_1947.jpg" ).into(image);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +39,10 @@ public class MainActivity extends AppCompatActivity
         infoRecherche = findViewById(R.id.infoRecherche);
         genreSpinner = findViewById(R.id.genreSpinner);
         nombreSeekBar = findViewById(R.id.nombreSeekBar);
-        nombreSeekBar.setMax(10);
+        nombreSeekBar.setMax(20);
+        limiteNombre = findViewById(R.id.checkNumber);
         lancerRecherche = findViewById(R.id.lancerRecherche);
+        rechercheAvancee = findViewById(R.id.rechercheAvancee);
 
         genres = new String[]{"African", "American", "British", "Cajun", "Caribbean", "Chinese",
                 "Eastern European", "European", "French", "German", "Greek", "Indian", "Irish",
@@ -53,9 +56,14 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 String query = infoRecherche.getText().toString();
-                String number = "5";
+                String number = "100";
+
+                if (!limiteNombre.isChecked())
+                    number = "" + nombreSeekBar.getProgress();
+
+                System.out.println(number);
                 Ion.with(v.getContext())
-                    .load("https://api.spoonacular.com/recipes/search?query=" + query + "&number=100&apiKey=" + key)
+                    .load("https://api.spoonacular.com/recipes/search?query=" + query + "&number=" + number + "&apiKey=" + key)
                     .asString()
                     .setCallback(new FutureCallback<String>() {
                         @Override
@@ -65,6 +73,14 @@ public class MainActivity extends AppCompatActivity
                             startActivity(resultats);
                         }
                     });
+            }
+        });
+
+        rechercheAvancee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goTo = new Intent(MainActivity.this, Resultats.class);
+                startActivity(goTo);
             }
         });
     }
