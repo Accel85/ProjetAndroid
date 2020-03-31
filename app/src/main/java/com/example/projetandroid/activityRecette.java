@@ -28,9 +28,9 @@ public class activityRecette extends AppCompatActivity {
         titre.setText(test.getTitle());
 
         TextView temps = findViewById(R.id.temps);
-        temps.setText(test.getReadyIn()+"");
+        temps.setText(test.getReadyIn()+" min");
 
         TextView nb = findViewById(R.id.nbPerso);
-        nb.setText(test.getServings()+"");
+        nb.setText(test.getServings()+" personnes");
     }
 }
