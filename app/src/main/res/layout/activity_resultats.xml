@@ -19,13 +19,24 @@
 
     <ListView
         android:id="@+id/listV"
-        android:layout_width="409dp"
-        android:layout_height="623dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="1dp"
         android:fadeScrollbars="true"
         android:scrollbarStyle="insideOverlay"
         android:verticalScrollbarPosition="right"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/texteTitle" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

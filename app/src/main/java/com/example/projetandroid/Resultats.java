@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -36,6 +38,14 @@ public class Resultats extends AppCompatActivity {
                 laRecette.putExtra("selected", ra.getItem(position));
                 laRecette.putExtra("listeRecettes", recettes.getRecettes());
                 startActivityForResult(laRecette, RESULT_OK);
+            }
+        });
+
+        ImageButton butRetour = findViewById(R.id.imageButton4);
+        butRetour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }
