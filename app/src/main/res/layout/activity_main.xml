@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarSize="8dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/test"
+    >
 
     <TextView
         android:id="@+id/texteTitle"

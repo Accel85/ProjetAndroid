@@ -2,4 +2,7 @@
     <string name="app_name">ProjetAndroid</string>
     <string name="check_number">Ne pas limiter le nombre de résultat (max 100)</string>
     <string name="rechercheAvancee">Recherches avancées</string>
+
+
+    <string name="infoRechercheAvancee">Rechercher de manière plus efficace</string>
 </resources>

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
         rechercheAvancee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goTo = new Intent(MainActivity.this, Resultats.class);
+                Intent goTo = new Intent(MainActivity.this, RechercheAvancee.class);
                 startActivity(goTo);
             }
         });
