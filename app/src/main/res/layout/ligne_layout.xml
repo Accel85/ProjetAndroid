@@ -8,16 +8,17 @@
 
     <TextView
         android:id="@+id/titre"
-        android:layout_width="299dp"
+        android:layout_width="265dp"
         android:layout_height="match_parent"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
         android:id="@+id/personnes"
-        android:layout_width="56dp"
+        android:layout_width="45dp"
         android:layout_height="match_parent" />
+
     <TextView
         android:id="@+id/temps"
-        android:layout_width="56dp"
+        android:layout_width="103dp"
         android:layout_height="match_parent" />
 </LinearLayout>
