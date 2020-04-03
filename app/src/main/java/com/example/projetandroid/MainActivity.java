@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity
         infoRecherche = findViewById(R.id.infoRecherche);
         genreSpinner = findViewById(R.id.genreSpinner);
         nombreSeekBar = findViewById(R.id.nombreSeekBar);
-        nombreSeekBar.setMax(20);
         limiteNombre = findViewById(R.id.checkNumber);
         lancerRecherche = findViewById(R.id.lancerRecherche);
 
