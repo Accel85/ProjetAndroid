@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.projetandroid.requete.DetailRecette;
 import com.example.projetandroid.requete.Recette;
 import com.example.projetandroid.requete.Recettes;
 
@@ -19,18 +20,22 @@ public class activityRecette extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        Recette test = extras.getParcelable("selected");
-
-        ArrayList list = extras.getParcelableArrayList("listeRecettes");
+        DetailRecette test = extras.getParcelable("detail");
 
 
         TextView titre = findViewById(R.id.tittle);
         titre.setText(test.getTitle());
 
         TextView temps = findViewById(R.id.temps);
-        temps.setText(test.getReadyIn()+" min");
+        temps.setText(test.getReadyInMinutes()+" min");
 
         TextView nb = findViewById(R.id.nbPerso);
         nb.setText(test.getServings()+" personnes");
+
+        TextView ingr = findViewById(R.id.ingredients);
+        ingr.setText(test.getExtendedIngredients().toString());
+
+        TextView instr = findViewById(R.id.instruct);
+        instr.setText(test.getAnalyzedInstructions());
     }
 }
