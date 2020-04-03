@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -16,11 +15,10 @@ import android.widget.Spinner;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 
-import org.json.JSONException;
-
 public class MainActivity extends AppCompatActivity
 {
     public static String key = "d80aa41935b94f5eb933fad13a39737e";
+    public static String key2 = "d8e2a243dbc440858fbdf43afb889b8b";
 
     private EditText infoRecherche;
     private Spinner genreSpinner;
@@ -39,7 +37,6 @@ public class MainActivity extends AppCompatActivity
         infoRecherche = findViewById(R.id.infoRecherche);
         genreSpinner = findViewById(R.id.genreSpinner);
         nombreSeekBar = findViewById(R.id.nombreSeekBar);
-        nombreSeekBar.setMax(20);
         limiteNombre = findViewById(R.id.checkNumber);
         lancerRecherche = findViewById(R.id.lancerRecherche);
         rechercheAvancee = findViewById(R.id.rechercheAvancee);
@@ -73,14 +70,6 @@ public class MainActivity extends AppCompatActivity
                             startActivity(resultats);
                         }
                     });
-            }
-        });
-
-        rechercheAvancee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goTo = new Intent(MainActivity.this, RechercheAvancee.class);
-                startActivity(goTo);
             }
         });
     }

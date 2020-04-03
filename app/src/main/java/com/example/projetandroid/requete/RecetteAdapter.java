@@ -27,7 +27,7 @@ public class RecetteAdapter extends ArrayAdapter<Recette> {
         TextView titre = (TextView)row.findViewById(R.id.titre);
         titre.setText(r.getTitle());
         TextView pers = (TextView)row.findViewById(R.id.personnes);
-        pers.setText("for: "+r.getServings());
+        pers.setText("For : "+r.getServings());
         TextView temps = (TextView)row.findViewById(R.id.temps);
         temps.setText(""+r.getReadyIn() +"'");
         return(row);
