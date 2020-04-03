@@ -33,7 +33,11 @@ public class activityRecette extends AppCompatActivity {
         nb.setText(test.getServings()+" personnes");
 
         TextView ingr = findViewById(R.id.ingredients);
-        ingr.setText(test.getExtendedIngredients().toString());
+        String ingrs = "";
+        for (String in: test.getExtendedIngredients()) {
+            ingrs = ingrs +"\n"+ in;
+        }
+        ingr.setText(ingrs);
 
         TextView instr = findViewById(R.id.instruct);
         instr.setText(test.getAnalyzedInstructions());
