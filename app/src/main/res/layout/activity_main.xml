@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     android:scrollbarSize="8dp"
     tools:context=".MainActivity"
-    android:background="@drawable/test"
+    android:background="@drawable/background"
     >
 
     <TextView
         android:id="@+id/texteTitle"
-        android:layout_width="119dp"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Recettes"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +27,7 @@
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,15 +80,18 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/texteNombre" />
 
     <Button
         android:id="@+id/lancerRecherche"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@android:color/holo_purple"
         android:text="Rechercher"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -111,9 +115,23 @@
         android:id="@+id/rechercheAvancee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@android:color/holo_purple"
         android:text="@string/rechercheAvancee"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInfo" />
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="342dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/info_recherche_avancee"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lancerRecherche" />
