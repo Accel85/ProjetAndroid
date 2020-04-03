@@ -4,10 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbarSize="8dp"
-    tools:context=".MainActivity"
     android:background="@drawable/background"
-    >
+    android:scrollbarSize="8dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/texteGenre2"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Nom du plat :"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texteTitle" />
 
     <TextView
         android:id="@+id/texteTitle"
@@ -27,32 +42,28 @@
         style="@android:style/Widget.Material.EditText"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textCursorDrawable="@android:color/holo_purple"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texteTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/texteGenre2" />
 
     <Spinner
         android:id="@+id/genreSpinner"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
         android:scrollbarSize="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/texteGenre"
-        app:layout_constraintTop_toBottomOf="@+id/infoRecherche" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texteGenre" />
 
     <SeekBar
         android:id="@+id/nombreSeekBar"
         style="@style/Widget.AppCompat.SeekBar"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
         android:indeterminate="false"
         android:max="100"
         android:progress="1"
@@ -61,25 +72,23 @@
         android:scrollIndicators="top"
         android:scrollbarSize="4sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/texteNombre"
-        app:layout_constraintTop_toBottomOf="@+id/genreSpinner" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texteNombre" />
 
     <TextView
         android:id="@+id/texteNombre"
-        android:layout_width="100dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Nombre :"
+        android:text="Nombre de résultats :"
+        android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/nombreSeekBar"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texteGenre" />
+        app:layout_constraintTop_toBottomOf="@+id/genreSpinner" />
 
     <CheckBox
         android:id="@+id/checkNumber"
@@ -89,36 +98,34 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/texteNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreSeekBar" />
 
     <Button
         android:id="@+id/lancerRecherche"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@android:color/holo_purple"
         android:text="Rechercher"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreSeekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/checkNumber" />
 
     <TextView
         android:id="@+id/texteGenre"
-        android:layout_width="100dp"
+        android:layout_width="300dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="Genre :"
+        android:text="Genre de cuisine :"
+        android:textAlignment="textStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/genreSpinner"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoRecherche" />
 
