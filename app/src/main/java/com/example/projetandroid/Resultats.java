@@ -7,14 +7,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.projetandroid.requete.DetailRecette;
-import com.example.projetandroid.requete.Recette;
 import com.example.projetandroid.requete.RecetteAdapter;
 import com.example.projetandroid.requete.Recettes;
 import com.koushikdutta.async.future.FutureCallback;
@@ -26,7 +22,6 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Resultats extends AppCompatActivity {
 
@@ -45,7 +40,7 @@ public class Resultats extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Ion.with(view.getContext())
-                        .load("https://api.spoonacular.com/recipes/" + ra.getItem(position).getId() + "/information?apiKey=d80aa41935b94f5eb933fad13a39737e")
+                        .load("https://api.spoonacular.com/recipes/" + ra.getItem(position).getId() + "/information?apiKey=d8e2a243dbc440858fbdf43afb889b8b")
                         .asString()
                         .setCallback(new FutureCallback<String>() {
 

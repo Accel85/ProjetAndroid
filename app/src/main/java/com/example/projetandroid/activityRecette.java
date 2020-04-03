@@ -5,16 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.projetandroid.requete.DetailRecette;
-import com.example.projetandroid.requete.Recette;
-import com.example.projetandroid.requete.Recettes;
 import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
 
 public class activityRecette extends AppCompatActivity {
 
