@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity
     private SeekBar nombreSeekBar;
     private CheckBox limiteNombre;
     private Button lancerRecherche;
-    private Button rechercheAvancee;
 
     private String[] genres;
 
