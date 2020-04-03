@@ -3,7 +3,7 @@
     <string name="check_number">Ne pas limiter le nombre de résultat (max 100)</string>
     <string name="rechercheAvancee">Recherche avancée</string>
 
-    <string name="info_recherche_avancee">En plus des champs sélectionnés, vous pouvez rajouter des paramètres via la recherche avancée</string>
+    <string name="info_recherche_avancee">En plus des champs sélectionnés, vous pouvez rajouter des paramètres via la recherche avancée.</string>
 
     <string name="infoRechercheAvancee">Rechercher de manière plus efficace</string>
 </resources>
