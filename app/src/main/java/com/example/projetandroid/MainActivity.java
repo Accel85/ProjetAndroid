@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity
         nombreSeekBar.setMax(20);
         limiteNombre = findViewById(R.id.checkNumber);
         lancerRecherche = findViewById(R.id.lancerRecherche);
-        rechercheAvancee = findViewById(R.id.rechercheAvancee);
 
         genres = new String[]{"African", "American", "British", "Cajun", "Caribbean", "Chinese",
                 "Eastern European", "European", "French", "German", "Greek", "Indian", "Irish",
@@ -73,14 +72,6 @@ public class MainActivity extends AppCompatActivity
                             startActivity(resultats);
                         }
                     });
-            }
-        });
-
-        rechercheAvancee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goTo = new Intent(MainActivity.this, RechercheAvancee.class);
-                startActivity(goTo);
             }
         });
     }
