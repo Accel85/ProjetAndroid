@@ -3,6 +3,8 @@ package com.example.projetandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,5 +45,14 @@ public class activityRecette extends AppCompatActivity {
 
         ImageView img = findViewById(R.id.imageView);
         Picasso.get().load(test.getImage()).into(img);
+
+        ImageButton retour = findViewById(R.id.imageButton);
+        retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                finish();
+            }
+        });
     }
 }
