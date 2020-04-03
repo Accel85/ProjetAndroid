@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 String query = infoRecherche.getText().toString();
+                query = query.trim();
                 String number = "100";
 
                 if (!limiteNombre.isChecked())
