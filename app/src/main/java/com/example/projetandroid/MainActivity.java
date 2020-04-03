@@ -21,6 +21,7 @@ import org.json.JSONException;
 public class MainActivity extends AppCompatActivity
 {
     public static String key = "d80aa41935b94f5eb933fad13a39737e";
+    public static  String key2 = "d8e2a243dbc440858fbdf43afb889b8b";
 
     private EditText infoRecherche;
     private Spinner genreSpinner;

@@ -16,6 +16,7 @@ import com.example.projetandroid.requete.Recette;
 import com.example.projetandroid.requete.RecetteAdapter;
 import com.example.projetandroid.requete.Recettes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Resultats extends AppCompatActivity {
@@ -36,6 +37,11 @@ public class Resultats extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent laRecette = new Intent(Resultats.this, activityRecette.class);
                 laRecette.putExtra("selected", ra.getItem(position));
+                ArrayList<Recette> list = recettes.getRecettes();
+                ArrayList<Integer> listId = new ArrayList<Integer>();
+                for ( Recette rec : list) {
+                    listId.add(rec.getId());
+                }
                 laRecette.putExtra("listeRecettes", recettes.getRecettes());
                 startActivityForResult(laRecette, RESULT_OK);
             }
