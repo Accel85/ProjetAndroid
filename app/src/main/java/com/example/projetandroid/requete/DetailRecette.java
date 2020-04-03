@@ -1,20 +1,7 @@
 package com.example.projetandroid.requete;
 
-import android.content.Intent;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
-import android.view.View;
-
-import com.example.projetandroid.MainActivity;
-import com.example.projetandroid.Resultats;
-import com.koushikdutta.async.future.FutureCallback;
-import com.koushikdutta.ion.Ion;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.JSONTokener;
 
 import java.util.ArrayList;
 
