@@ -3,11 +3,14 @@ package com.example.projetandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.projetandroid.requete.DetailRecette;
 import com.example.projetandroid.requete.Recette;
 import com.example.projetandroid.requete.Recettes;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -37,5 +40,8 @@ public class activityRecette extends AppCompatActivity {
 
         TextView instr = findViewById(R.id.instruct);
         instr.setText(test.getAnalyzedInstructions());
+
+        ImageView img = findViewById(R.id.imageView);
+        Picasso.get().load(test.getImage()).into(img);
     }
 }
