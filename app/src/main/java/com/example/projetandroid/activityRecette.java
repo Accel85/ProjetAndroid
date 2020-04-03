@@ -3,6 +3,7 @@ package com.example.projetandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -38,9 +39,12 @@ public class activityRecette extends AppCompatActivity {
             ingrs = ingrs +"\n"+ in;
         }
         ingr.setText(ingrs);
+        ingr.setMovementMethod(new ScrollingMovementMethod());
+
 
         TextView instr = findViewById(R.id.instruct);
         instr.setText(test.getAnalyzedInstructions());
+        instr.setMovementMethod(new ScrollingMovementMethod());
 
         ImageView img = findViewById(R.id.imageView);
         Picasso.get().load(test.getImage()).into(img);
